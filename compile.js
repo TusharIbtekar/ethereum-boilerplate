@@ -25,7 +25,7 @@ const input = {
 
 const output = JSON.parse(solc.compile(JSON.stringify(input)))
 
-// module.exports = output.contracts['Inbox.sol']['Inbox'];
+// module.exports = JSON.parse(solc.compile(JSON.stringify(input))).contracts['Inbox.sol'].Inbox;
 // console.log(module.exports);
 
 exports.interface = output.contracts['Inbox.sol']['Inbox'].abi;
